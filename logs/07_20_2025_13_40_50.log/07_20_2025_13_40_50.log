@@ -1,0 +1,7 @@
+[ 2025-07-20 13:40:52,482 ] 24 root - INFO - Entered the data ingestion method or component
+[ 2025-07-20 13:40:52,488 ] 27 root - INFO - Exported the dataset as dataframe
+[ 2025-07-20 13:40:52,495 ] 33 root - INFO - Train test split initiated
+[ 2025-07-20 13:40:52,503 ] 39 root - INFO - Ingestion of the data is completed
+[ 2025-07-20 13:40:52,509 ] 71 root - INFO - Read train and test data completed
+[ 2025-07-20 13:40:52,509 ] 51 root - INFO - Categorical Columns: ['gender', 'race_ethnicity', 'parental_level_of_education', 'lunch', 'test_preparation_course']
+[ 2025-07-20 13:40:52,509 ] 52 root - INFO - Numerical Columns: ['writing_score', 'reading_score']
