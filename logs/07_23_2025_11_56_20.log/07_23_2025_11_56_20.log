@@ -3,3 +3,156 @@
  * Running on http://127.0.0.1:5000
  * Running on http://192.168.31.83:5000
 [ 2025-07-23 11:56:20,843 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-07-23 11:56:51,109 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 11:56:51] "GET / HTTP/1.1" 200 -
+[ 2025-07-23 11:56:51,245 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 11:56:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-07-23 11:57:14,604 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 11:57:14] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-07-23 11:57:33,194 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 16, in predict
+    data_scaled = preprocessor.transform(features)
+                                         ^^^^^^^^
+NameError: name 'features' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 20, in predict
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py] line number[16] error message[name 'features' is not defined]
+[ 2025-07-23 11:57:33,198 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 11:57:33] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-07-23 11:57:44,720 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 16, in predict
+    data_scaled = preprocessor.transform(features)
+                                         ^^^^^^^^
+NameError: name 'features' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 20, in predict
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py] line number[16] error message[name 'features' is not defined]
+[ 2025-07-23 11:57:44,728 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 11:57:44] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-07-23 11:57:48,747 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 16, in predict
+    data_scaled = preprocessor.transform(features)
+                                         ^^^^^^^^
+NameError: name 'features' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 20, in predict
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py] line number[16] error message[name 'features' is not defined]
+[ 2025-07-23 11:57:48,748 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 11:57:48] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-07-23 11:57:54,577 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 11:57:54] "GET / HTTP/1.1" 200 -
+[ 2025-07-23 11:58:09,857 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 11:58:09] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-07-23 11:58:27,333 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 16, in predict
+    data_scaled = preprocessor.transform(features)
+                                         ^^^^^^^^
+NameError: name 'features' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 20, in predict
+    raise CustomException(e, sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py] line number[16] error message[name 'features' is not defined]
+[ 2025-07-23 11:58:27,335 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 11:58:27] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-07-23 11:58:31,252 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 11:58:31] "[33mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" 404 -
+[ 2025-07-23 11:59:51,771 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 11:59:51] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-07-23 12:00:05,263 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 16, in predict
+    model=load_object(file_path=model_path)
+                                         ^^^
+NameError: name 'features' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\venv\Lib\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 20, in predict
+    preds=model.predict(data_scaled)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src.exception.CustomException: Error occured in python script name [C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py] line number[16] error message[name 'features' is not defined]
+[ 2025-07-23 12:00:05,274 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 12:00:05] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
