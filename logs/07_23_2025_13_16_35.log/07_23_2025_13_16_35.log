@@ -1,0 +1,217 @@
+[ 2025-07-23 13:16:35,590 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.43.15:5000
+[ 2025-07-23 13:16:35,590 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-07-23 13:16:55,138 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:16:55] "GET / HTTP/1.1" 200 -
+[ 2025-07-23 13:16:55,253 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:16:55] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-07-23 13:17:10,161 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:17:10] "[33mGET /predictsdata HTTP/1.1[0m" 404 -
+[ 2025-07-23 13:17:17,157 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:17:17] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-07-23 13:17:33,408 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 13, in predict
+    model_path=os.path.join("artifacts","model.pkl")
+               ^^
+NameError: name 'os' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py] line number[13] error message[name 'os' is not defined]
+[ 2025-07-23 13:17:33,413 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:17:33] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-07-23 13:19:25,582 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:19:25] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-07-23 13:19:39,880 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 13, in predict
+    model_path=os.path.join("artifacts","model.pkl")
+               ^^
+NameError: name 'os' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py] line number[13] error message[name 'os' is not defined]
+[ 2025-07-23 13:19:39,888 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:19:39] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-07-23 13:21:07,994 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:21:07] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-07-23 13:21:20,717 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 13, in predict
+    model_path=os.path.join("artifacts","model.pkl")
+               ^^
+NameError: name 'os' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py] line number[13] error message[name 'os' is not defined]
+[ 2025-07-23 13:21:20,719 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:21:20] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-07-23 13:22:18,944 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 13, in predict
+    model_path=os.path.join("artifacts","model.pkl")
+               ^^
+NameError: name 'os' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py] line number[13] error message[name 'os' is not defined]
+[ 2025-07-23 13:22:18,946 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:22:18] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-07-23 13:22:21,939 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:22:21] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-07-23 13:22:46,913 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 13, in predict
+    model_path=os.path.join("artifacts","model.pkl")
+               ^^
+NameError: name 'os' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 24, in predict
+    raise CustomException(e,sys)
+src.exception.CustomException: Error occured in python script name [C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py] line number[13] error message[name 'os' is not defined]
+[ 2025-07-23 13:22:46,916 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:22:46] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-07-23 13:28:46,359 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 13, in predict
+    model_path = os.path.join("artifacts", "model.pkl")
+               ^^
+NameError: name 'os' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 24, in predict
+    preds = model.predict(data_scaled)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src.exception.CustomException: Error occured in python script name [C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py] line number[13] error message[name 'os' is not defined]
+[ 2025-07-23 13:28:46,362 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:28:46] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -
+[ 2025-07-23 13:29:16,737 ] 875 app - ERROR - Exception on /predictdata [POST]
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 13, in predict
+    model_path = os.path.join("artifacts", "model.pkl")
+               ^^
+NameError: name 'os' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+         ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\app.py", line 39, in predict_datapoint
+    results=predict_pipeline.predict(pred_df)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py", line 24, in predict
+    preds = model.predict(data_scaled)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+src.exception.CustomException: Error occured in python script name [C:\Users\UMANG SHRIVASTAVA\Desktop\ML Projects\MLproject\src\pipeline\predict_pipeline.py] line number[13] error message[name 'os' is not defined]
+[ 2025-07-23 13:29:16,740 ] 97 werkzeug - INFO - 127.0.0.1 - - [23/Jul/2025 13:29:16] "[35m[1mPOST /predictdata HTTP/1.1[0m" 500 -

@@ -1,0 +1,10 @@
+[ 2025-07-24 17:08:33,997 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.31.83:5000
+[ 2025-07-24 17:08:33,997 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-07-24 17:08:43,225 ] 97 werkzeug - INFO - 127.0.0.1 - - [24/Jul/2025 17:08:43] "GET / HTTP/1.1" 200 -
+[ 2025-07-24 17:08:43,288 ] 97 werkzeug - INFO - 127.0.0.1 - - [24/Jul/2025 17:08:43] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+[ 2025-07-24 17:08:49,086 ] 97 werkzeug - INFO - 127.0.0.1 - - [24/Jul/2025 17:08:49] "GET /predictdata HTTP/1.1" 200 -
+[ 2025-07-24 17:09:03,744 ] 97 werkzeug - INFO - 127.0.0.1 - - [24/Jul/2025 17:09:03] "POST /predictdata HTTP/1.1" 200 -
+[ 2025-07-24 17:10:18,263 ] 97 werkzeug - INFO - 127.0.0.1 - - [24/Jul/2025 17:10:18] "POST /predictdata HTTP/1.1" 200 -
